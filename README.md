@@ -14,7 +14,7 @@ It will prompt you to enter your subdomain name, please enter it and it will spi
 
 ## With Zsh Aliases
 
-Go to your `~/.aliases` or `~/.zshrc` file and add an alias that equals `node` and your absolute path to the repo.
+Go to your `~/.aliases` or `~/.zshrc` file and add an alias that equals `node` and your absolute path to the `app.js` file in the repo.
 
 For example:
 

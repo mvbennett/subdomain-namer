@@ -4,8 +4,8 @@ const readline = require("readline");
 function deHyphen(branchName) {
   if (!/-$/.test(branchName)) return branchName;
 
-  const deHyphened = branchName.slice(0, branchName.length - 1);
-  return deHyphen(deHyphened);
+  const deHyphenedName = branchName.slice(0, branchName.length - 1);
+  return deHyphen(deHyphenedName);
 }
 
 const rl = readline.createInterface({
@@ -15,9 +15,9 @@ const rl = readline.createInterface({
 
 rl.question("Enter branch name: ", (input) => {
   const lowerCased = input.toLowerCase();
-  const shortened = lowerCased.slice(0, 28);
-  const deHyphened = deHyphen(shortened);
+  const shortenedName = lowerCased.slice(0, 28);
+  const deHyphenedName = deHyphen(shortenedName);
 
-  console.log(deHyphened);
+  console.log(deHyphenedName);
   rl.close();
 });
