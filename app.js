@@ -8,16 +8,26 @@ function deHyphen(branchName) {
   return deHyphen(deHyphenedName);
 }
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-rl.question("Enter branch name: ", (input) => {
+function parseName(input) {
   const lowerCased = input.toLowerCase();
   const shortenedName = lowerCased.slice(0, 28);
   const deHyphenedName = deHyphen(shortenedName);
 
   console.log(deHyphenedName);
-  rl.close();
-});
+}
+
+const arg = process.argv?.[2]
+
+if (arg.length) {
+  parseName(arg);
+} else {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  rl.question("Enter branch name: ", (input) => {
+    parseName(input);
+    rl.close();
+  });
+}
