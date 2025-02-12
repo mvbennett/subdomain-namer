@@ -6,6 +6,18 @@ For qwikly determining all of your pesky long branch subdomain names
 
 After cloning repo, navigate to repo and run
 
+### Option 1
+
+Please replace example brnach with your branch in the example below:
+
+```
+node app.js <my-super-long-branch-name-that-is-way-longer-than-28-characters>
+```
+
+It will immediately print the correct subomain name for that branch without any extra steps!
+
+### Option 2
+
 ```
 node app.js
 ```
