@@ -1,4 +1,3 @@
-const fs = require("fs");
 const readline = require("readline");
 
 function deHyphen(branchName) {
@@ -16,9 +15,9 @@ function parseName(input) {
   console.log(deHyphenedName);
 }
 
-const arg = process.argv?.[2]
+const arg = process.argv?.[2];
 
-if (arg.length) {
+if (arg?.length) {
   parseName(arg);
 } else {
   const rl = readline.createInterface({
